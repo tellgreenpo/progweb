@@ -5,21 +5,48 @@
     <title>Mateo's Website</title>
 </head>
 <style>
-    .container {
-
-        vertical-align: middle;
+    html,main {
+        background-color: darkslategray;
+        height: 100%;
     }
-    .image {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 50%;
+    .container {
+        height: 100%;
+        display : flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    .item{
+        width: 300px;
+        height: 400px;
+        background-color: gray;
+        display: flex;
+        transition: all 1s;
+        position: absolute;
+        opacity: 0.8;
+    }
+    .stack-top{
+        z-index : 9;
+    }
+    .item:hover{
+        width: 350px;
+        height : 450px;
+    }
+    img{
+        height: 100%;
+        width: 100%;
+        align-self: flex-end;
     }
 </style>
 <body>
 <main>
     <div class="container">
-        <img class ="image" src="cowboy.jpg">
+        <div class="item stack-top">
+            <img src="Famous-people-minimalism-04.jpg" alt="che image">
+        </div>
+        <div class="item stack">
+            <img src="maradona.jpg" alt="maradona img">
+        </div>
     </div>
 </main>
 </body>
